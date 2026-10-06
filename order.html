@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>New order | Tarp Shop</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@700;800&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body data-page="order" data-role="customer">
+<header class="top"><a class="brand" href="index.html">Tarp Shop</a><nav id="nav"></nav></header>
+<main>
+<form id="form" class="card" enctype="multipart/form-data">
+  <h1>New order</h1>
+  <p id="msg" hidden></p>
+  <fieldset class="service">
+    <legend>How should we prepare it?</legend>
+    <label class="choice"><input type="radio" name="service" value="print_only" checked><span><strong>Print only.</strong> I already have the photo or design. Print it as it is.</span></label>
+    <label class="choice"><input type="radio" name="service" value="layout"><span><strong>Layout first.</strong> You design the layout and send me a preview to approve before printing. <small class="muted">Layout fee <span id="fee"></span></small></span></label>
+  </fieldset>
+  <div class="grid">
+    <label class="event-only">Event theme<select name="theme" id="theme"></select></label>
+    <label>Size<select name="size" id="size"></select></label>
+    <label class="event-only">Event date<input type="date" name="event_date" id="event_date" required></label>
+    <label>Deadline (when you need it)<input type="date" name="deadline" id="deadline" required></label>
+  </div>
+  <div id="birthday" class="grid" hidden>
+    <label>Celebrant's name<input name="celebrant_name"></label>
+    <label>Age<input type="number" name="celebrant_age" min="1" max="120"></label>
+  </div>
+  <label>Photos or design files (up to 5; JPG, PNG or WEBP)<input type="file" name="images[]" accept=".jpg,.jpeg,.png,.webp" multiple></label>
+  <label>Notes<textarea name="notes" rows="3" placeholder="Wording, colors, where each photo should go"></textarea></label>
+  <label class="check"><input type="checkbox" name="is_rush" id="rush"><span id="rushlabel">Rush order</span></label>
+  <p class="total">Estimated price: <strong id="price">₱0.00</strong></p>
+  <button class="btn">Place order</button>
+</form>
+</main>
+<script src="common.js"></script>
+<script src="pages.js"></script>
+<script src="orders.js"></script>
+<script src="boot.js"></script>
+</body></html>

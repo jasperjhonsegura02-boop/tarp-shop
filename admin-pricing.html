@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pricing | Tarp Shop</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@700;800&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body data-page="adminpricing" data-role=admin>
+<header class="top"><a class="brand" href="index.html">Tarp Shop</a><nav id="nav"></nav></header>
+<main>
+<h1>Sizes and prices</h1>
+<p id="msg" hidden></p>
+<p class="muted">Customers can only order sizes marked Available. Changing a price does not change past orders.</p>
+<div class="card scroll"><table>
+  <tr><th>Size</th><th>Price (₱)</th><th>Status</th><th></th></tr>
+  <tbody id="sizes"></tbody>
+</table></div>
+<form id="settings" class="card">
+  <h2>Extra charges</h2>
+  <div class="grid">
+    <label>Rush order surcharge (%)<input type="number" name="rush" id="rush" min="0" max="300" step="1" required></label>
+    <label>Layout fee (₱)<input type="number" name="layout_fee" id="layout_fee" min="0" step="0.01" required></label>
+  </div>
+  <button class="btn">Save extra charges</button>
+</form>
+</main>
+<script src="common.js"></script>
+<script src="pages.js"></script>
+<script src="orders.js"></script>
+<script src="boot.js"></script>
+</body></html>

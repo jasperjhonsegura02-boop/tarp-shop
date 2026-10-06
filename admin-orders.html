@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Orders | Tarp Shop</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@700;800&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body data-page="adminorders" data-role=admin>
+<header class="top"><a class="brand" href="index.html">Tarp Shop</a><nav id="nav"></nav></header>
+<main>
+<h1>Orders</h1>
+<div class="filters">
+  <label>Show <select id="status">
+    <option value="active">Active</option><option value="all">All</option>
+    <option>Pending</option><option>Designing</option><option>For approval</option><option>Approved</option>
+    <option>Printing</option><option>Ready</option><option>Claimed</option></select></label>
+  <label>Sort by <select id="sort">
+    <option value="rush">Rush first, then deadline</option>
+    <option value="deadline">Nearest deadline</option>
+    <option value="newest">Newest</option></select></label>
+</div>
+<div class="card scroll"><table>
+  <tr><th>Order</th><th>Customer</th><th>Event</th><th>Deadline</th><th>Price</th><th>Status</th></tr>
+  <tbody id="rows"></tbody>
+</table></div>
+<dialog id="dlg">
+  <div class="row"><span></span><button type="button" class="btn small ghost" data-close>Close</button></div>
+  <div class="body"></div>
+</dialog>
+</main>
+<script src="common.js"></script>
+<script src="pages.js"></script>
+<script src="orders.js"></script>
+<script src="boot.js"></script>
+</body></html>

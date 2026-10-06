@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Income | Tarp Shop</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@700;800&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="adminreports" data-role=admin>
+<header class="top"><a class="brand" href="index.html">Tarp Shop</a><nav id="nav"></nav></header>
+<main>
+<h1>Income report</h1>
+<p class="tabs"><a href="#" data-p="week">Weekly</a><a href="#" data-p="month">Monthly</a><a href="#" data-p="year">Yearly</a></p>
+<p class="muted">Counts orders marked as paid.</p>
+<div class="card scroll"><table>
+  <tr><th>Period</th><th>Paid orders</th><th>Income</th><th></th></tr>
+  <tbody id="rows"></tbody>
+</table></div>
+</main>
+<script src="common.js"></script>
+<script src="pages.js"></script>
+<script src="orders.js"></script>
+<script src="boot.js"></script>
+</body></html>
